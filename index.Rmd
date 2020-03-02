@@ -14,18 +14,13 @@ knitr::opts_chunk$set(
   results='asis', 
   echo = FALSE
 )
-
 library(glue)
 library(tidyverse)
-
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
-
 # Holds all the links that were inserted for placement at the end
 links <- c()
-
 source('parsing_functions.R')
-
 # Load csv with position info
 position_data <- read_csv('positions.csv')
 ```
@@ -50,26 +45,13 @@ Aside
 
 
 
-```{r}
-# When in export mode the little dots are unaligned, so fix that. 
-if(PDF_EXPORT){
-  cat("View this CV online with links at _nickstrayer.me/cv_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
-}
-```
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
-
-
+- <i class="fa fa-envelope"></i> jaesa.rogers@asu.edu
+- <i class="fa fa-github"></i> github.com/JaesaR
 
 Technical Skills {#skills}
 --------------------------------------------------------------------------------
@@ -108,6 +90,9 @@ skills2 <- tribble(
 )
 build_skill_bars(skills2)
 
+```
+
+
 
 
 
@@ -125,18 +110,13 @@ Last updated on `r Sys.Date()`.
 
 Main
 ================================================================================
-
-Nick Strayer {#title}
+Jaesa Rogers {#title}
 --------------------------------------------------------------------------------
-
-
 ```{r}
 intro_text <- "I am currently a Data Analyst at ASU International Development and I am interested in continuing a career of transforming data into visualizations within an industry that works for the greater good. 
 I have a passion for organized compassion."
-
 cat(sanitize_links(intro_text))
 ```
-
 
 
 Education {data-icon=graduation-cap data-concise=true}
@@ -147,43 +127,26 @@ print_section(position_data, 'education')
 ```
 
 
-
 Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
-
-::: aside
-I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers. 
-:::
 
 ```{r}
 print_section(position_data, 'industry_positions')
 ```
 
-<br>
-<br>
-<br>
-
 Leadership Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
-
 
 ```{r}
 print_section(position_data, 'leadership_positions')
 ```
-
-
-
-
 ```{r}
 if(PDF_EXPORT){
   cat("
   
 Links {data-icon=link}
 --------------------------------------------------------------------------------
-
 <br>
-
-
 ")
   
   walk2(links, 1:length(links), function(link, index){
@@ -191,5 +154,3 @@ Links {data-icon=link}
   })
 }
 ```
-
-
