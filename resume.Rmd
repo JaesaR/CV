@@ -57,7 +57,7 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> jaesa.rogers@asu.edu
-- <i class="fa fa-github"></i> github.com/JaesaR
+- <i class="fa fa-github"></i> [github.com/JaesaR](https://https://github.com/JaesaR/)
 - <i class="fa fa-link"></i> [JaesaR.github.io](https://JaesaR.github.io/)
 
 
@@ -100,21 +100,7 @@ skills2 <- tribble(
 )
 build_skill_bars(skills2)
 ```
-Open Source Contributions {#open-source}
---------------------------------------------------------------------------------
 
-All projects available at `github.com/JaesaR/`
-
-
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `slid3r`: D3 add-on for fully svg slider inputs
-
-
-More info {#more-info}
---------------------------------------------------------------------------------
-
-Visit [my website](https://JaesaR.github.io/)
 
 
 Disclaimer {#disclaimer}
