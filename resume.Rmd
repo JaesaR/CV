@@ -48,6 +48,7 @@ position_data <- read_csv('positions.csv') %>%
 Aside
 ================================================================================
 
+![logo](headshot.png)
 
 
 Contact {#contact}
@@ -57,7 +58,7 @@ Contact {#contact}
 
 - <i class="fa fa-envelope"></i> jaesa.rogers@asu.edu
 - <i class="fa fa-github"></i> github.com/JaesaR
-- <i class="fa fa-phone"></i> (775) 303-4737
+- <i class="fa fa-link"></i> [JaesaR.github.io](https://JaesaR.github.io/)
 
 
 
@@ -71,9 +72,8 @@ Technical Skills {#skills}
 skills <- tribble(
   ~skill,               ~level,
   "Microsoft Excel",     5,
-  "Microsoft PowerPoint",4.5,
   "Tableau",             3,
-  "R",                   3,
+  "R",                   2.5,
   "Microsoft Access",    2,
   "SQL",                 2,
   
@@ -90,9 +90,9 @@ Soft Skills {#skills2}
 ```{r}
 skills2 <- tribble(
 ~skill,                              ~level,
-  "Collaboration with others",              5,
-  "8 years comedic improv",                 5,  
-  "Public Speaking and communication",      4.5,
+  "Collaboration",                          5,
+  "8 years of comedic improv",              5,  
+  "Public Speaking and Communication",      4.5,
   "Organizational Leadership",              4,
 
  
@@ -100,6 +100,22 @@ skills2 <- tribble(
 )
 build_skill_bars(skills2)
 ```
+Open Source Contributions {#open-source}
+--------------------------------------------------------------------------------
+
+All projects available at `github.com/JaesaR/`
+
+
+- `shinysense`: R package to use sensor data in Shiny apps
+- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
+- `slid3r`: D3 add-on for fully svg slider inputs
+
+
+More info {#more-info}
+--------------------------------------------------------------------------------
+
+Visit [my website](https://JaesaR.github.io/)
+
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
@@ -120,8 +136,7 @@ Jaesa Rogers {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I am currently a Data Analyst at ASU International Development and I am interested in continuing a career of transforming data into visualizations within an industry that works for the greater good. 
-I have a passion for organized compassion."
+intro_text <- "I am a graduate student studying [Program Evaluation and Data Analytics](https://ds4ps.org/ms-prog-eval-data-analytics/) at Arizona State University, as well as a Data Analyst at [Arizona State University International Development.](https://internationaldevelopment.asu.edu/) I am interested in continuing a career of transforming data into visualizations within an industry that works for the greater good, because I have a passion for organized compassion."
 
 
 cat(sanitize_links(intro_text))
